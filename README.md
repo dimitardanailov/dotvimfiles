@@ -1,6 +1,6 @@
 <h2>My .vim settings</h2>
 
-I will tutorial: 
+I follow tutorial "Synchronizing plugins with git submodules and pathogen" : 
 
 http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
