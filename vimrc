@@ -30,6 +30,8 @@ call pathogen#infect()
 "   - https://github.com/honza/vim-snippets.git
 " + syntastic
 "   - https://github.com/scrooloose/syntastic/
+" + vim-fugitive
+"   - https://github.com/tpope/vim-fugitive
 " Plugins configurations are placed bottom of the file
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
