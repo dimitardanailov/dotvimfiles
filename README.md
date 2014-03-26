@@ -1,12 +1,12 @@
 <h2>My .vim settings</h2>
 
-I will use tutorial: 
+I will tutorial: 
 
 http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
-to sync my .vim dot files
+to sync my .vim dot files and Github.
 
-<h3>Commands</h3>
+<h3>Keep your dotfiles in git</h3>
 
 <code>
 git clone https://github.com/dimitardanailov/vimrc.git ~/.vim/
