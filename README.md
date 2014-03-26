@@ -99,7 +99,7 @@ cd ~/.vim/bundle/fugitive
 </code>
 
 <code>
-cd ~/.vim/bundle/fugitive
+git pull origin master
 </code>
 
 <h3>Upgrading all bundled plugins</h3>
