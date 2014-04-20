@@ -176,7 +176,7 @@ augroup HTMLCommands
   autocmd!
   autocmd BufRead,BufNewFile *.html setfiletype html
   " Auto format file
-  autocmd BufRead,BufWritePre *.html normal gg=G''
+  " autocmd BufRead,BufWritePre *.html normal gg=G''
   " Comments will be with pres '//'
   autocmd Filetype html nnoremap <buffer> <leader>c I <!--<ESC>A--><ESC>
 augroup END
@@ -188,7 +188,7 @@ augroup JavaScriptCommands
   autocmd!
   autocmd BufRead,BufNewFile *.js setfiletype javascript
   " Auto format file
-  autocmd BufRead,BufWritePre *.js normal gg=G''
+  "" autocmd BufRead,BufWritePre *.js normal gg=G''
   " Comment Javascript
   autocmd Filetype javascript nnoremap <buffer>  <leader>c I//<ESC>
 augroup END
@@ -245,6 +245,17 @@ noremap <down> <nop>
 " Make shortcut command for parentheses. Example ci( will be equal to cp
 onoremap p i(
 
+" Make shortcut command for curly braces. Example ci{ will be equal to ct
+onoremap t i{
+
+" Make shortcut command for square brackets. Example ci[ will be equal to cr
+onoremap r i[
+
+" Change word using the current paste buffer
+" Post:
+" http://unix.stackexchange.com/questions/88714/vim-how-can-i-do-a-change-word-using-the-current-paste-buffer
+nnoremap <C-j> viwp
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " REG EXP
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -263,7 +274,10 @@ nnoremap <D-s> :w<CR>
 " Paste external source to vim
 inoremap <D-v> <C-r><S-*> 
 " let you use dr to replace word under cursor with contents of register 0 (i.e. what you last copied)
+" dr will move cursor to right
 nnoremap dr diwh"0p
+" let you use dt to replace word under cursor with contents of register 0 (i.e. what you last copied)
+nnoremap dt diw"0p
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN VIMRC QUICKLY
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
