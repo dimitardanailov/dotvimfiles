@@ -251,10 +251,14 @@ onoremap t i{
 " Make shortcut command for square brackets. Example ci[ will be equal to cr
 onoremap r i[
 
-" Change word using the current paste buffer
-" Post:
-" http://unix.stackexchange.com/questions/88714/vim-how-can-i-do-a-change-word-using-the-current-paste-buffer
-nnoremap <C-j> viwp
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" WORKING WITH WINDOWS
+" Get ideas from this screencast:
+" http://vimcasts.org/episodes/working-with-windows/
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" increase current window width N columns
+nnoremap <C-r> <C-w>>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " REG EXP
@@ -271,13 +275,22 @@ nnoremap ? ?\v
 " http://stackoverflow.com/questions/9450905/how-to-bind-vim-through-tmux-to-cmd-key/9451636#9451636
 onoremap <D-s> :w<CR>
 nnoremap <D-s> :w<CR>
+
 " Paste external source to vim
 inoremap <D-v> <C-r><S-*> 
+
 " let you use dr to replace word under cursor with contents of register 0 (i.e. what you last copied)
 " dr will move cursor to right
 nnoremap dr diwh"0p
+
 " let you use dt to replace word under cursor with contents of register 0 (i.e. what you last copied)
 nnoremap dt diw"0p
+
+" Change word using the current paste buffer
+" Post:
+" http://unix.stackexchange.com/questions/88714/vim-how-can-i-do-a-change-word-using-the-current-paste-buffer
+nnoremap <C-j> viwp
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN VIMRC QUICKLY
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
