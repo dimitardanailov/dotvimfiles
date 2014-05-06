@@ -9,7 +9,7 @@ to sync my .vim dot files and Github.
 <h3>Keep your dotfiles in git</h3>
 
 <code>
-git clone https://github.com/dimitardanailov/vimrc.git ~/.vim/
+git clone https://github.com/dimitardanailov/dotvimfiles ~/.vim/
 </code>
 
 If you need Move the .vimrc and .gvimrc files into the .vim directory:
