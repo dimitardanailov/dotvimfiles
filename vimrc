@@ -32,6 +32,8 @@ call pathogen#infect()
 "   - https://github.com/scrooloose/syntastic/
 " + vim-fugitive
 "   - https://github.com/tpope/vim-fugitive
+" + html5.vim
+"   - https://github.com/othree/html5.vim
 " Plugins configurations are placed bottom of the file
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -349,3 +351,19 @@ map <C-n> :NERDTreeToggle<CR>
 
 " How can I close vim if the only window left open is a NERDTree?
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                           HTML 5 VIM 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Disable event-handler attributes support:
+let g:html5_event_handler_attributes_complete = 0
+
+" Disable RDFa attributes support:
+let g:html5_rdfa_attributes_complete = 0
+
+Disable microdata attributes support:
+let g:html5_microdata_attributes_complete = 0
+
+Disable WAI-ARIA attribute support:
+let g:html5_aria_attributes_complete = 0
