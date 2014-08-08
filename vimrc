@@ -34,6 +34,8 @@ call pathogen#infect()
 "   - https://github.com/tpope/vim-fugitive
 " + html5.vim
 "   - https://github.com/othree/html5.vim
+" + vim-coffee-script.cim
+"   - https://github.com/kchmck/vim-coffee-script
 " Plugins configurations are placed bottom of the file
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
