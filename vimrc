@@ -36,6 +36,8 @@ call pathogen#infect()
 "   - https://github.com/othree/html5.vim
 " + vim-coffee-script.cim
 "   - https://github.com/kchmck/vim-coffee-script
+" + python-mode
+"   - https://github.com/klen/python-mode.git
 " Plugins configurations are placed bottom of the file
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -147,12 +149,12 @@ let mapleader = ','
 " keep backup after o/w file
 set backup
 if $backupdir=~# '^.,'
-  let &backupdir = "/Users/macosx/Library/Vim/backup," . $backupdir
+  let &backupdir = "/Users/i/Library/Vim/backup," . $backupdir
 endif 
 
 set swapfile
 if $backupdir=~# '^.,'
-  let &directory = "/Users/macosx/Library/Vim/swap," . $directory
+  let &directory = "/Users/i/Library/Vim/swap," . $directory
 endif 
 
 " command line editing
@@ -160,7 +162,7 @@ set wildmenu
 set wildmode=full
 set undofile
 if $undodir =~# '^\.\%(,\|$\)'
-  let $undodir = "/Users/macosx/Library/Vim/undo," . $undodir
+  let $undodir = "/Users/i/Library/Vim/undo," . $undodir
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
