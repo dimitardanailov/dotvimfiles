@@ -7,41 +7,6 @@
 syntax on
 syntax enable
 
-filetype on
-filetype indent on
-filetype plugin on
-
-" Load pathogen
-" Source: https://github.com/tpope/vim-pathogen
-call pathogen#infect()
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugin list
-" + surround.vim
-"   - https://github.com/tpope/vim-surround
-" + nerdtree
-"   - https://github.com/scrooloose/nerdtree
-" + vim-colors-solarized 
-"   - https://github.com/altercation/vim-colors-solarized
-" + vim-snipmate
-"   - https://github.com/tomtom/tlib_vim
-"   - https://github.com/MarcWeber/vim-addon-mw-utils.git
-"   - https://github.com/garbas/vim-snipmate.git
-"   - https://github.com/honza/vim-snippets.git
-"   - https://github.com/SirVer/ultisnips.git
-" + syntastic
-"   - https://github.com/scrooloose/syntastic/
-" + vim-fugitive
-"   - https://github.com/tpope/vim-fugitive
-" + html5.vim
-"   - https://github.com/othree/html5.vim
-" + vim-coffee-script.cim
-"   - https://github.com/kchmck/vim-coffee-script
-" + python-mode
-"   - https://github.com/klen/python-mode.git
-" Plugins configurations are placed bottom of the file
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Don't behave like Vi
 set nocompatible
 " highlights search results
@@ -49,6 +14,77 @@ set hlsearch
 set noswapfile
 set visualbell
 set gdefault
+
+filetype off
+
+" Load pathogen
+" Source: https://github.com/tpope/vim-pathogen
+" call pathogen#infect()
+
+" set the runtime path to include Vundle and initialize
+" Migrating From Pathogen to Vundle ->
+" http://blog.thomasupton.com/2014/02/migrating-from-pathogen-to-vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin list
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins configurations are placed bottom of the file
+
+" + surround.vim
+"   - https://github.com/tpope/vim-surround
+Bundle 'bundle/vim-surround'
+
+" + nerdtree
+"   - https://github.com/scrooloose/nerdtree
+Plugin 'https://github.com/scrooloose/nerdtree'
+
+" + vim-colors-solarized 
+"   - https://github.com/altercation/vim-colors-solarized
+Bundle 'bundle/vim-colors-solarized'
+
+" + vim-snipmate
+"   - https://github.com/tomtom/tlib_vim
+Bundle 'bundle/tlib_vim'
+"   - https://github.com/MarcWeber/vim-addon-mw-utils.git
+Bundle 'bundle/vim-addon-mw-utils'
+"   - https://github.com/garbas/vim-snipmate.git
+Bundle 'bundle/vim-snipmate'
+"   - https://github.com/honza/vim-snippets.git
+Bundle 'bundle/vim-snippets'
+"   - https://github.com/SirVer/ultisnips.git
+Bundle 'bundle/ultisnips'
+
+" + syntastic
+"   - https://github.com/scrooloose/syntastic/
+Bundle 'bundle/syntastic'
+
+" + vim-fugitive
+"   - https://github.com/tpope/vim-fugitive
+Bundle 'bundle/fugitive'
+
+" + html5.vim
+"   - https://github.com/othree/html5.vim
+Bundle 'bundle/html5.vim'
+
+" + vim-coffee-script.cim
+"   - https://github.com/kchmck/vim-coffee-script
+Bundle 'vim-coffee-script'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin list
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ENCODINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -360,6 +396,15 @@ map <C-n> :NERDTreeToggle<CR>
 
 " How can I close vim if the only window left open is a NERDTree?
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"
+" " If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           HTML 5 VIM 
