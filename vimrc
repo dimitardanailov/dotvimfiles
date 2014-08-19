@@ -28,6 +28,7 @@ call pathogen#infect()
 "   - https://github.com/MarcWeber/vim-addon-mw-utils.git
 "   - https://github.com/garbas/vim-snipmate.git
 "   - https://github.com/honza/vim-snippets.git
+"   - https://github.com/SirVer/ultisnips.git
 " + syntastic
 "   - https://github.com/scrooloose/syntastic/
 " + vim-fugitive
