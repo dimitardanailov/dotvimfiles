@@ -84,7 +84,15 @@ Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'L9'
 Plugin 'FuzzyFinder'
 
+" Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
 Plugin 'kien/ctrlp.vim'
+
+" YouCompleteMe is a fast, as-you-type, fuzzy-search code completion engine
+" for Vim.
+Plugin 'Valloric/YouCompleteMe'
+
+" Lean & mean status/tabline for vim that's light as air.
+" Plugin 'bling/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
