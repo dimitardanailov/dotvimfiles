@@ -1,4 +1,4 @@
-<h2>My .vim settings</h2>
+<h2>My .vim settings with Pathogen</h2>
 
 I follow tutorial "Synchronizing plugins with git submodules and pathogen" : 
 
