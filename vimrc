@@ -17,6 +17,11 @@ set gdefault
 
 filetype off
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin list
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins configurations are placed bottom of the file
+
 " Load pathogen
 " Source: https://github.com/tpope/vim-pathogen
 " call pathogen#infect()
@@ -27,12 +32,6 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugin list
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugins configurations are placed bottom of the file
-
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
@@ -41,37 +40,51 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 
 " Vim colors scheme
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 
-Bundle 'tomtom/tlib_vim'
+Plugin 'tomtom/tlib_vim'
 
 " Snippets
 
 " Syntastic is a syntax checking plugin for Vim that runs files through external 
 " syntax checkers and displays any resulting errors to the user.
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
 " HTML5 + inline SVG omnicomplete funtion, indent and syntax for Vim. 
 " Based on the default htmlcomplete.vim.
-Bundle 'othree/html5.vim'
+Plugin 'othree/html5.vim'
 
 " This project adds CoffeeScript support to vim. It covers syntax, indenting,
 " compiling, and more.
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
 
 " Surround.vim is all about 'surroundings': parentheses, brackets, quotes, XML
 " tags, and more. The plugin provides mappings to easily delete, change and
 " add such surroundings in pairs.
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 
 " I'm not going to lie to you; fugitive.vim may very well be the best Git
 " wrapper of all time.
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
 " Remember when everybody and their mother was using TextMate for Ruby on
 " Rails development? Well if it wasn't for rails.vim, we'd still be in that
 " era. So shut up and pay some respect.
-Bundle 'tpope/vim-rails'
+Plugin 'tpope/vim-rails'
+
+" This plugin is meant to simplify a task I've found too common in my
+" workflow: switching between a single-line statement and a multi-line one. It
+" offers the following default keybindings, which can be customized:
+" + gS to split a one-liner into multiple lines
+" + gJ (with the cursor on the first line of a block) to join a block into a
+" single-line statement.
+Plugin 'AndrewRadev/splitjoin.vim'
+
+" FuzzyFinder
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+
+Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
