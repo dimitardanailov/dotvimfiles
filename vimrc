@@ -37,49 +37,62 @@ Plugin 'gmarik/Vundle.vim'
 
 " + surround.vim
 "   - https://github.com/tpope/vim-surround
-Bundle 'bundle/vim-surround'
+Bundle 'tpope/vim-surround'
 
 " + nerdtree
 "   - https://github.com/scrooloose/nerdtree
-Plugin 'https://github.com/scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 " + vim-colors-solarized 
 "   - https://github.com/altercation/vim-colors-solarized
-Bundle 'bundle/vim-colors-solarized'
+Bundle 'altercation/vim-colors-solarized'
 
 " + vim-snipmate
 "   - https://github.com/tomtom/tlib_vim
-Bundle 'bundle/tlib_vim'
+Bundle 'tomtom/tlib_vim'
 "   - https://github.com/MarcWeber/vim-addon-mw-utils.git
-Bundle 'bundle/vim-addon-mw-utils'
+Bundle 'MarcWeber/vim-addon-mw-utils'
 "   - https://github.com/garbas/vim-snipmate.git
-Bundle 'bundle/vim-snipmate'
+Bundle 'garbas/vim-snipmate'
 "   - https://github.com/honza/vim-snippets.git
-Bundle 'bundle/vim-snippets'
+Bundle 'honza/vim-snippets'
 "   - https://github.com/SirVer/ultisnips.git
-Bundle 'bundle/ultisnips'
+Bundle 'SirVer/ultisnips'
 
 " + syntastic
 "   - https://github.com/scrooloose/syntastic/
-Bundle 'bundle/syntastic'
+Bundle 'scrooloose/syntastic'
 
 " + vim-fugitive
 "   - https://github.com/tpope/vim-fugitive
-Bundle 'bundle/fugitive'
+Bundle 'tpope/vim-fugitive'
 
 " + html5.vim
 "   - https://github.com/othree/html5.vim
-Bundle 'bundle/html5.vim'
+Bundle 'othree/html5.vim'
 
 " + vim-coffee-script.cim
 "   - https://github.com/kchmck/vim-coffee-script
-Bundle 'vim-coffee-script'
+Bundle 'kchmck/vim-coffee-script'
+
+" + vim rails
+"   - https://github.com/tpope/vim-rails
+Bundle 'tpope/vim-rails'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-
+" filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve
+" 
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin list
