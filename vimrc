@@ -27,56 +27,50 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin list
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins configurations are placed bottom of the file
 
-" + surround.vim
-"   - https://github.com/tpope/vim-surround
-Bundle 'tpope/vim-surround'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
-" + nerdtree
-"   - https://github.com/scrooloose/nerdtree
+" The NERD tree allows you to explore your filesystem and to open files 
+" and directories.
 Plugin 'scrooloose/nerdtree'
 
-" + vim-colors-solarized 
-"   - https://github.com/altercation/vim-colors-solarized
+" Vim colors scheme
 Bundle 'altercation/vim-colors-solarized'
 
-" + vim-snipmate
-"   - https://github.com/tomtom/tlib_vim
 Bundle 'tomtom/tlib_vim'
-"   - https://github.com/MarcWeber/vim-addon-mw-utils.git
-Bundle 'MarcWeber/vim-addon-mw-utils'
-"   - https://github.com/garbas/vim-snipmate.git
-Bundle 'garbas/vim-snipmate'
-"   - https://github.com/honza/vim-snippets.git
-Bundle 'honza/vim-snippets'
-"   - https://github.com/SirVer/ultisnips.git
-Bundle 'SirVer/ultisnips'
 
-" + syntastic
-"   - https://github.com/scrooloose/syntastic/
+" Snippets
+
+" Syntastic is a syntax checking plugin for Vim that runs files through external 
+" syntax checkers and displays any resulting errors to the user.
 Bundle 'scrooloose/syntastic'
 
-" + vim-fugitive
-"   - https://github.com/tpope/vim-fugitive
-Bundle 'tpope/vim-fugitive'
-
-" + html5.vim
-"   - https://github.com/othree/html5.vim
+" HTML5 + inline SVG omnicomplete funtion, indent and syntax for Vim. 
+" Based on the default htmlcomplete.vim.
 Bundle 'othree/html5.vim'
 
-" + vim-coffee-script.cim
-"   - https://github.com/kchmck/vim-coffee-script
+" This project adds CoffeeScript support to vim. It covers syntax, indenting,
+" compiling, and more.
 Bundle 'kchmck/vim-coffee-script'
 
-" + vim rails
-"   - https://github.com/tpope/vim-rails
+" Surround.vim is all about 'surroundings': parentheses, brackets, quotes, XML
+" tags, and more. The plugin provides mappings to easily delete, change and
+" add such surroundings in pairs.
+Bundle 'tpope/vim-surround'
+
+" I'm not going to lie to you; fugitive.vim may very well be the best Git
+" wrapper of all time.
+Bundle 'tpope/vim-fugitive'
+
+" Remember when everybody and their mother was using TextMate for Ruby on
+" Rails development? Well if it wasn't for rails.vim, we'd still be in that
+" era. So shut up and pay some respect.
 Bundle 'tpope/vim-rails'
 
 " All of your Plugins must be added before the following line
@@ -409,15 +403,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " How can I close vim if the only window left open is a NERDTree?
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" Trigger configuration. Do not use <tab> if you use
-" https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-"
-" " If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           HTML 5 VIM 
