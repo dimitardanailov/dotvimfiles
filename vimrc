@@ -89,7 +89,7 @@ Plugin 'kien/ctrlp.vim'
 
 " YouCompleteMe is a fast, as-you-type, fuzzy-search code completion engine
 " for Vim.
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " Lean & mean status/tabline for vim that's light as air.
 " Plugin 'bling/vim-airline'
