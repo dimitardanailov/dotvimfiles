@@ -42,6 +42,9 @@ Plugin 'scrooloose/nerdtree'
 " Vim colors scheme
 Plugin 'altercation/vim-colors-solarized'
 
+" Dracula theme
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+
 Plugin 'tomtom/tlib_vim'
 
 " Snippets
@@ -79,6 +82,11 @@ Plugin 'tpope/vim-rails'
 " + gJ (with the cursor on the first line of a block) to join a block into a
 " single-line statement.
 Plugin 'AndrewRadev/splitjoin.vim'
+
+" Summary:
+"  This project contains Vim configuration files for editing and compiling Ruby
+"  within Vim.  See the project homepage for more details.
+Plugin 'vim-ruby/vim-ruby'
 
 " FuzzyFinder
 Plugin 'L9'
@@ -202,6 +210,8 @@ set background=dark
 " Light theme
 " set background=light
 colorscheme solarized
+
+" color Dracula
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           MY VARIABLES
@@ -440,3 +450,71 @@ let g:html5_microdata_attributes_complete = 0
 
 " Disable WAI-ARIA attribute support:
 let g:html5_aria_attributes_complete = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                           VIM Ruby
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Ruby
+" au BufNewFile,BufRead *.rb,*.rbw,*.gemspeccall s:setf('ruby')
+
+" Ruby on Rails
+" au BufNewFile,BufRead *.builder,*.rxml,*.rjs,*.ruby call s:setf('ruby')
+
+" Rakefile
+" au BufNewFile,BufRead [rR]akefile,*.Rakefilecall s:setf('ruby')
+
+" Rantfile
+" au BufNewFile,BufRead [rR]antfile,*.Rantfilecall s:setf('ruby')
+
+" IRB config
+" au BufNewFile,BufRead .irbrc,irbrccall s:setf('ruby')
+
+" Pry config
+" au BufNewFile,BufRead .pryrccall s:setf('ruby')
+
+" Rackup
+" au BufNewFile,BufRead *.Rubycall s:setf('ruby')
+
+" Capistrano
+" au BufNewFile,BufRead Capfile,*.cap     call s:setf('ruby')
+
+" Bundler
+" au BufNewFile,BufRead Gemfilecall s:setf('ruby')
+
+" Guard
+" au BufNewFile,BufRead Guardfile,.Guardfilecall s:setf('ruby')
+
+" Chef
+" au BufNewFile,BufRead Cheffilecall s:setf('ruby')
+" au BufNewFile,BufRead Berksfilecall s:setf('ruby')
+
+" Vagrant
+" au BufNewFile,BufRead [vV]agrantfilecall s:setf('ruby')
+
+" Autotest
+" au BufNewFile,BufRead .Autotestcall s:setf('ruby')
+
+" eRuby
+" au BufNewFile,BufRead *.erb,*.rhtmlcall s:setf('eruby')
+
+" Thor
+" au BufNewFile,BufRead [tT]horfile,*.Thorcall s:setf('ruby')
+
+" Rabl
+" au BufNewFile,BufRead *.rablcall s:setf('ruby')
+
+" Jbuilder
+" au BufNewFile,BufRead *.jbuildercall s:setf('ruby')
+
+" Puppet librarian
+" au BufNewFile,BufRead Puppetfilecall s:setf('ruby')
+"
+" Buildr Buildfile
+" au BufNewFile,BufRead [Bb]uildfilecall s:setf('ruby')
+
+" Appraisal
+" au BufNewFile,BufRead Appraisalscall s:setf('ruby')
+
+" CocoaPods
+" au BufNewFile,BufRead Podfile,*.podspeccall s:setf('ruby')
