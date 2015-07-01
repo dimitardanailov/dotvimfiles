@@ -35,7 +35,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" The NERD tree allows you to explore your filesystem and to open files 
+" The NERD tree allows you to explore your filesystem and to open files
 " and directories.
 Plugin 'scrooloose/nerdtree'
 
@@ -49,11 +49,11 @@ Plugin 'tomtom/tlib_vim'
 
 " Snippets
 
-" Syntastic is a syntax checking plugin for Vim that runs files through external 
+" Syntastic is a syntax checking plugin for Vim that runs files through external
 " syntax checkers and displays any resulting errors to the user.
 Plugin 'scrooloose/syntastic'
 
-" HTML5 + inline SVG omnicomplete funtion, indent and syntax for Vim. 
+" HTML5 + inline SVG omnicomplete funtion, indent and syntax for Vim.
 " Based on the default htmlcomplete.vim.
 Plugin 'othree/html5.vim'
 
@@ -113,7 +113,7 @@ filetype plugin indent on    " required
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve
-" 
+"
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
@@ -144,7 +144,7 @@ set ignorecase
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
 " wraps between words
-set linebreak 
+set linebreak
 set scrolloff=3
 " Show vertical border of 80 chars per line
 set cc=80
@@ -202,7 +202,7 @@ set timeoutlen=1000
 set ttimeoutlen=100
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                           COLOR 
+"                           COLOR
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Dark theme
 set background=dark
@@ -225,12 +225,12 @@ let mapleader = ','
 set backup
 if $backupdir=~# '^.,'
   let &backupdir = "/Users/i/Library/Vim/backup," . $backupdir
-endif 
+endif
 
 set swapfile
 if $backupdir=~# '^.,'
   let &directory = "/Users/i/Library/Vim/swap," . $directory
-endif 
+endif
 
 " command line editing
 set wildmenu
@@ -244,7 +244,7 @@ endif
 "                           AUTO COMMANDS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " cursor for re-open file is set to old position
-autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif 
+autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIMSCRIPT
@@ -255,7 +255,7 @@ augroup vimscript
 augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" HTML 
+" HTML
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 augroup HTMLCommands
   autocmd!
@@ -298,26 +298,26 @@ augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 augroup PHPCommands
   autocmd!
-  autocmd BufRead,BufNewFile *.php setfiletype php 
+  autocmd BufRead,BufNewFile *.php setfiletype php
   " Auto format file
   autocmd BufRead,BufWritePre .php normal gg=G''
   " Comment Javascript
 augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                           IGNORE SYNTAX ERRORS 
+"                           IGNORE SYNTAX ERRORS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " AngularJS
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                           MY SHORTCUTS 
+"                           MY SHORTCUTS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Insert newline without entering insert mode
 " Source:
-" http://vim.wikia.com/wiki/Insert_newline_without_entering_insert_mode 
+" http://vim.wikia.com/wiki/Insert_newline_without_entering_insert_mode
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
@@ -356,13 +356,13 @@ nnoremap ? ?\v
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Copy & Paste
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" How to implement apple key / command key: 
+" How to implement apple key / command key:
 " http://stackoverflow.com/questions/9450905/how-to-bind-vim-through-tmux-to-cmd-key/9451636#9451636
 onoremap <D-s> :w<CR>
 nnoremap <D-s> :w<CR>
 
 " Paste external source to vim
-inoremap <D-v> <C-r><S-*> 
+inoremap <D-v> <C-r><S-*>
 
 " let you use dr to replace word under cursor with contents of register 0 (i.e. what you last copied)
 " dr will move cursor to right
@@ -375,6 +375,13 @@ nnoremap dt diw"0p
 " Post:
 " http://unix.stackexchange.com/questions/88714/vim-how-can-i-do-a-change-word-using-the-current-paste-buffer
 nnoremap <C-j> viwp
+
+" Turning off auto indent when pasting text into vim
+" http://stackoverflow.com/questions/2514445/turning-off-auto-indent-when-pasting-text-into-vim
+" http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN VIMRC QUICKLY
@@ -414,7 +421,7 @@ function! InsertTabWrapper()
   let col = col(".") - 1
   if !col || getline(".")[col - 1] !~ '\k'
     return "\<tab>"
-  else 
+  else
     return "\<c-n>"
 endfunction
 inoremap <TAB> <C-r>=InsertTabWrapper()<CR>
@@ -422,7 +429,7 @@ inoremap <TAB> <C-r>=InsertTabWrapper()<CR>
 inoremap <S-TAB> <C-p>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                           NERDTree 
+"                           NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " How can I open a NERDTree automatically when vim starts up if no files were
@@ -436,7 +443,7 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                           HTML 5 VIM 
+"                           HTML 5 VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Disable event-handler attributes support:
