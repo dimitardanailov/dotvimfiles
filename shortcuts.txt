@@ -239,6 +239,8 @@ z% - try to create fold for code block
 
 "qd - Override macros "q" and delete insert mode line info.
 
+:reg - To access all currently defined registers type. Source: http://stackoverflow.com/questions/1497958/how-to-use-vim-registers
+
 ============ Insert mode ============
 
 with control key can be use for run commands from normal mode. Example <CTRL-w>
