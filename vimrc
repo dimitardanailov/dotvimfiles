@@ -178,9 +178,10 @@ set backspace=indent,eol,start
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tabs and indenting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" http://stackoverflow.com/questions/3682582/how-to-use-only-tab-not-space-in-vim
 set autoindent
 set smartindent
-set expandtab
+set noexpandtab
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
