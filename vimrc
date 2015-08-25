@@ -182,9 +182,18 @@ set backspace=indent,eol,start
 set autoindent
 set smartindent
 set noexpandtab
+
+" My Default preferance are for indentation with 2.
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
+
+" Project setup. This option is turn on if you working on project with
+" indentation equal to 4.
+" set shiftwidth=4
+" set softtabstop=4
+" set tabstop=4
+
 " round > and < to multiples of shiftwidth
 set shiftround
 
