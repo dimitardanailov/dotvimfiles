@@ -1,64 +1,32 @@
-<h2>My .vim settings with Pathogen</h2>
+## My .vim settings with Vundle
 
-I follow tutorial "Synchronizing plugins with git submodules and pathogen" : 
+### Keep your dotfiles in git
 
-http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
-
-to sync my .vim dot files and Github.
-
-<h3>Keep your dotfiles in git</h3>
-
-<code>
+```bash
 git clone https://github.com/dimitardanailov/dotvimfiles ~/.vim/
-</code>
+```
 
-If you need Move the .vimrc and .gvimrc files into the .vim directory:
+If you need Move the `.vimrc` and `.gvimrc` files into the `.vim` directory:
 
-<code>
+```bash
 mv .vimrc ~/.vim/vimrc
-</code>
+```
 
-<code>
+```bash
 mv .gvimrc ~/.vim/gvimrc
-</code>
+```
 
-Create symbolic links so that ~/.vimrc points to the ~/.vim/vimrc file:
+Create symbolic links so that `~/.vimrc` points to the `~/.vim/vimrc` file:
 
-<code>
+```bash
 ln -s ~/.vim/vimrc ~/.vimrc
-</code>
+```
 
-<code>
+```bash
 ln -s ~/.vim/gvimrc ~/.gvimrc
-</code>
+```
 
-<h3>Install plugins as submodules</h3>
-
-With pathogen installed, it’s now possible to keep the files for each plugin together, which means that every plugin can be kept in its own git repository. The best way to do this is to use git submodules, which are designed especially for the purpose of keeping git repositories within a git repository.
-
-To install the fugitive plugin as a git submodule, take the following steps:
-
-<code>
-cd ~/.vim
-</code>
-
-<code>
-mkdir ~/.vim/bundle
-</code>
-
-<code>
-git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
-</code>
-
-<code>
-git add .
-</code>
-
-<code>
-git commit -m "Install Fugitive.vim bundle as a submodule."
-</code>
-
-<h3>Installing your Vim environment on another machine</h3>
+### Installing your Vim environment on another machine
 
 Once your vim configuration is under version control, it’s quite straightforward to import your settings to any machine that has git installed. If you followed the instructions above to put your vimrc and plugins in a dotvim directory, then you can follow these steps to synchronise them to another machine:
 
@@ -82,48 +50,26 @@ ln -s ~/.vim/gvimrc ~/.gvimrc
 cd ~/.vim
 </code>
 
-<code>
-git submodule init
-</code>
+### Vundle
 
-<code>
-git submodule update
-</code>
+Documentation: [Vundle.vim](https://github.com/VundleVim/Vundle.vim)
 
-<h3>Upgrading a plugin bundle</h3>
+1. Introduction:
 
-At some point in the future, the fugitive plugin might be updated. To fetch the latest changes, go into the fugitive repository, and pull the latest version:
+   Installation requires [Git] and triggers [`git clone`] for each configured repository to `~/.vim/bundle/` by default.
+   Curl is required for search.
 
-<code>
-cd ~/.vim/bundle/fugitive
-</code>
+   If you are using Windows, go directly to [Windows setup]. If you run into any issues, please consult the [FAQ].
+   See [Tips] for some advanced configurations.
 
-<code>
-git pull origin master
-</code>
+   Using non-POSIX shells, such as the popular Fish shell, requires additional setup. Please check the [FAQ].
 
-<h3>Upgrading all bundled plugins</h3>
+2. Set up [Vundle]:
 
-You can use the foreach command to execute any shell script in from the root of all submodule directories. To update to the latest version of each plugin bundle, run the following:
+   `$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 
-<code>
-git submodule foreach git pull origin master
-</code>
+3. Install Plugins:
 
-<h3>Delete submodule</h3>
+   Launch `vim` and run `:PluginInstall`
 
-Of course fugitive plugin can be deleted, run the following:
-
-<code>
-git rm --cached bundle/fugitive
-</code>
-
-<code>
-rm -rf bundle/fugitive
-</code>
-
-<code>
-git commit -m "Delete Fugitive.vim bundle."
-</code>
-
-
+   To install from command line: `vim +PluginInstall +qall`
