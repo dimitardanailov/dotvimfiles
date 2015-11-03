@@ -108,6 +108,12 @@ Plugin 'shawncplus/phpcomplete.vim'
 " Up-to-date PHP syntax file (5.3–5.6 support)
 Plugin 'StanAngeloff/php.vim'
 
+" This is a plugin for Vim that integrates PHP quality checking tools, to
+" allow you to code to a particular standard and easily spot errors and
+" violations.
+
+Plugin 'joonty/vim-phpqa.git'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
