@@ -111,8 +111,12 @@ Plugin 'StanAngeloff/php.vim'
 " This is a plugin for Vim that integrates PHP quality checking tools, to
 " allow you to code to a particular standard and easily spot errors and
 " violations.
-
 Plugin 'joonty/vim-phpqa.git'
+
+" Syntax highlighting and indenting for JSX. JSX is a JavaScript syntax
+" transformer which translates inline XML document fragments into JavaScript
+" objects. It was developed by Facebook alongside React.
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
