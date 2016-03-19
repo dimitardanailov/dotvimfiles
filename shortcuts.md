@@ -1,21 +1,24 @@
 ==== Visual Mode ====
-vfs - Select everything from cursor to letter "s"
+### Visual mode
+`vfs` - Select everything from cursor to letter "s"
 
-viw - Select word
-viW - Select selection to next white space
+`viw` - Select word
+`viW` - Select selection to next white space
 
-vaw - select word and white space 
-vaw - select selection to next white space and select this white space
+`vaw` - select word and white space 
+`vaw` - select selection to next white space and select this white space
 
-vip - select all paragraph
-vap - select all paragraph and line after that
+`vip` - select all paragraph
+`vap` - select all paragraph and line after that
 
-vit - select all words into paragraph. Example: <p>Hello vim</h2>. If you type 
-vit, will be select "Hello vim:
-vat - select words and tags. Example: <p>Hello vim</p>. vat will selected "<p>Hello World</p>"
+`vit` - select all words on paragraph. Example: `<p>Hello vim</p>`. If you type 
+`vit`, will be select Hello vim
 
-vi + "character" - Example: function sum(arg1, arg2) cursor must be into "(" or 
+`vat` - select words and tags. Example: <p>Hello vim</p>. vat will selected "<p>Hello World</p>"
+
+`vi` + "character" - Example: `function sum(arg1, arg2)` cursor must be into "(" or 
 ")". vi( will selected "arg1, arg2".
+
 va + "character" - Example: function sum(arg1, arg2) cursor must be into "(" or 
 ")". va( will selected "(arg1, arg2)".
 ==== visual mode ====
