@@ -17,13 +17,13 @@
 
 `vit`, will be select Hello vim
 
-`vat` - select words and tags. Example: <p>Hello vim</p>. vat will selected "<p>Hello World</p>"
+`vat` - select words and tags. Example: `<p>Hello vim</p>` vat will selected `<p>Hello World</p>`.
 
 `vi` + "character" - Example: `function sum(arg1, arg2)` cursor must be into "(" or 
-")". vi( will selected "arg1, arg2".
+")". `vi(` will selected "arg1, arg2".
 
 `va` + "character" - `Example: function sum(arg1, arg2)` cursor must be into "(" or 
-")". va( will selected "(arg1, arg2)".
+")". `va(` will selected "(arg1, arg2)".
 
 ### Moving
 
@@ -61,7 +61,7 @@
 
 `gg` - top of the file
 
-`Shitft` + `G` - end of the file
+`<Shitft-G>` - end of the file
 
 
 `}` - move to paragraph forward
@@ -85,7 +85,9 @@
 
 
 `*` - will highlight word where is cursor.
+
 `#` - will place cursor to previous highlight word.
+
 `%` - moving end of ( or {
 
 ### Commands set numbers
@@ -159,13 +161,13 @@ insert mode.
 
 ### Scroll
 
-<CTRL-d> - scroll down half of screen
+`<CTRL-d>` - scroll down half of screen
 
-<CTRL-u> - scroll up half of screen
+`<CTRL-u>` - scroll up half of screen
 
-<CTRL-f> - scroll down all screen
+`<CTRL-f>` - scroll down all screen
 
-<CTRL-b> - scroll top all screen
+`<CTRL-b>` - scroll top all screen
 
 
 `H` - go of upper line
