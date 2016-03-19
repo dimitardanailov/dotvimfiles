@@ -331,6 +331,19 @@ augroup PHPCommands
 augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PYTHON PEP8
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           IGNORE SYNTAX ERRORS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
