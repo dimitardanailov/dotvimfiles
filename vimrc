@@ -197,7 +197,12 @@ set backspace=indent,eol,start
 " http://stackoverflow.com/questions/3682582/how-to-use-only-tab-not-space-in-vim
 set autoindent
 set smartindent
-set noexpandtab
+
+" Tabs
+" set noexpandtab
+
+" Spaces
+set expandtab
 
 " My Default preferance are for indentation with 2.
 set shiftwidth=2
