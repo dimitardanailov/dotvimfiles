@@ -352,3 +352,19 @@ Now if you press `z` only command for x will be run.
 #### Visual mode: 
 
 `S[` - will wrap text with "[".
+
+#### Commands
+
+Change tabs with spaces / spaces wit intervals
+
+```bash
+# Create new piple line
+:args file1 file2 file3
+
+# Execute retab command for each file
+:argdo retab
+
+
+# Save all files
+:wall
+```
