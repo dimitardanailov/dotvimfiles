@@ -118,6 +118,9 @@ Plugin 'joonty/vim-phpqa.git'
 " objects. It was developed by Facebook alongside React.
 Plugin 'mxw/vim-jsx'
 
+" This is an EditorConfig plugin for Vim.
+Plugin 'editorconfig/editorconfig-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
