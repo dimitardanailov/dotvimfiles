@@ -121,6 +121,17 @@ Plugin 'mxw/vim-jsx'
 " This is an EditorConfig plugin for Vim.
 Plugin 'editorconfig/editorconfig-vim'
 
+" Vimwiki is a personal wiki for Vim -- a number of linked text files that
+" have their own syntax highlighting.
+" 
+" With Vimwiki you can: 
+" - organize notes and ideas
+" - manage todo-lists
+" - write documentation
+" - maintain a diary
+" - export everything to HTML
+Plugin 'vimwiki/vimwiki'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
